@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -6,131 +7,36 @@
   <title>SOFIA BUJİTERİ</title>
   <style>
     body {
-      margin: 0;
-      padding: 1rem;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, pink, yellow, skyblue);
-      background-size: 400% 400%;
-      animation: gradientMove 10s ease infinite;
-    }
-
-    @keyframes gradientMove {
-      0% {background-position: 0% 50%;}
-      50% {background-position: 100% 50%;}
-      100% {background-position: 0% 50%;}
-    }
-
-    h1 {
+      background: linear-gradient(to right, pink, yellow, skyblue);
+      font-family: sans-serif;
+      padding: 2rem;
       text-align: center;
+    }
+    h1 {
+      font-size: 2rem;
       color: white;
-      font-size: 2.2rem;
-      text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+      text-shadow: 2px 2px #00000020;
     }
-
-    .cart {
-      background: white;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      border-radius: 1rem;
-      max-width: 500px;
-      margin: 1rem auto;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    .cart ul {
-      padding-left: 1rem;
-      margin: 0;
-    }
-
-    .product-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1rem;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
     .product {
       background: white;
-      border-radius: 1.5rem;
-      box-shadow: 0 0 15px rgba(0,0,0,0.15);
-      overflow: hidden;
-      text-align: center;
-      padding: 1rem;
-    }
-
-    .product img {
-      max-width: 100%;
-      height: auto;
       border-radius: 1rem;
+      padding: 1rem;
+      margin: 1rem auto;
+      max-width: 300px;
+      box-shadow: 0 2px 10px #00000030;
     }
-
-    .product h2 {
-      margin: 0.8rem 0 0.4rem;
-      font-size: 1.2rem;
-    }
-
-    .product p {
-      margin: 0.4rem 0;
-    }
-
-    .price {
-      font-weight: bold;
-      color: #e91e63;
-    }
-
-    button {
-      background: #e91e63;
-      color: white;
-      border: none;
-      border-radius: 0.5rem;
-      padding: 0.5rem 1rem;
-      margin-top: 0.5rem;
-      cursor: pointer;
+    img {
+      max-width: 100%;
+      border-radius: 1rem;
     }
   </style>
 </head>
 <body>
   <h1>SB - SOFIA BUJİTERİ</h1>
-
-  <div class="cart">
-    <h3>Sepetim</h3>
-    <ul id="cart-items"></ul>
+  <div class="product">
+    <h2>Gökkuşağı Kalpli Bileklik</h2>
+    <img src="https://i.imgur.com/7QgWv5b.jpg" alt="bileklik" />
+    <p>119.90 TL</p>
   </div>
-
-  <div class="product-list">
-    <div class="product">
-      <img src="https://cdn.pixabay.com/photo/2016/03/27/21/16/bracelet-1289236_960_720.jpg" alt="Gökkuşağı Kalpli Bileklik" />
-      <h2>Gökkuşağı Kalpli Bileklik</h2>
-      <p>Canlı renkleriyle tarzına neşe katacak, zarif bir kalpli bileklik.</p>
-      <p class="price">119.90 TL</p>
-      <button onclick="addToCart('Gökkuşağı Kalpli Bileklik')">Sepete Ekle</button>
-    </div>
-
-    <div class="product">
-      <img src="https://cdn.pixabay.com/photo/2018/01/04/10/12/necklace-3062248_960_720.jpg" alt="Vintage Çiçek Kolye" />
-      <h2>Vintage Çiçek Kolye</h2>
-      <p>Nostaljik çiçek detayıyla hem modern hem klasik bir duruş.</p>
-      <p class="price">149.90 TL</p>
-      <button onclick="addToCart('Vintage Çiçek Kolye')">Sepete Ekle</button>
-    </div>
-
-    <div class="product">
-      <img src="https://cdn.pixabay.com/photo/2016/11/29/06/15/time-1866376_960_720.jpg" alt="Minimal Deri Saat" />
-      <h2>Deri Kayışlı Minimal Saat</h2>
-      <p>Her kombine uyumlu zamansız bir aksesuar arayanlara özel.</p>
-      <p class="price">199.90 TL</p>
-      <button onclick="addToCart('Deri Kayışlı Minimal Saat')">Sepete Ekle</button>
-    </div>
-  </div>
-
-  <script>
-    function addToCart(productName) {
-      const list = document.getElementById('cart-items');
-      const item = document.createElement('li');
-      item.textContent = productName;
-      list.appendChild(item);
-    }
-  </script>
 </body>
 </html>
